@@ -1,0 +1,1 @@
+A low-cost pipeline that turns fabric catalog PDFs (about 100 product pages each) into one folder per product (clean swatch image + meta.json)
