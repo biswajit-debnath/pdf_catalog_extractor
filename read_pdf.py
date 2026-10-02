@@ -131,3 +131,28 @@ def list_images(page):
             "has_mask": info["has-mask"],
         })
     return images
+
+
+def read_page(page):
+    """One PageInfo record (plain dict, JSON-serializable)."""
+    lines = rebuild_lines(page)
+    word_count = sum(len(line["text"].split()) for line in lines)
+    info = {"page_index": page.number}
+    info.update(page_size(page))
+    info["has_text_layer"] = word_count > 0
+    info["word_count"] = word_count
+    info["lines"] = lines
+    info["images"] = list_images(page)
+    return info
+
+
+def iter_pages(doc):
+    """Yield PageInfo records one page at a time (no page images are loaded).
+
+    A page that fails to read yields {"page_index", "error"} and reading goes on.
+    """
+    for i in range(doc.page_count):
+        try:
+            yield read_page(doc[i])
+        except Exception as e:
+            yield {"page_index": i, "error": f"{type(e).__name__}: {e}"}

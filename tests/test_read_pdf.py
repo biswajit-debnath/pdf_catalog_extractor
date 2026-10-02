@@ -157,3 +157,54 @@ def test_rotated_page_images_in_displayed_space():
     assert after["area_share"] == pytest.approx(before["area_share"], abs=0.01)
     assert pymupdf.Rect(after["bbox"]).width == pytest.approx(pymupdf.Rect(before["bbox"]).height, abs=0.1)
     assert after["rotation"] == (before["rotation"] + 90) % 360
+
+
+# ---- Seg 4: PageInfo assembly ----
+
+def test_read_page_shape_and_json(ikat, matisse):
+    import json
+    for doc in (ikat, matisse):
+        for page in doc:
+            info = read_pdf.read_page(page)
+            assert list(info) == ["page_index", "width", "height", "area", "rotation",
+                                  "has_text_layer", "word_count", "lines", "images"]
+            assert info["page_index"] == page.number
+            assert json.loads(json.dumps(info)) == info
+
+
+def test_text_layer_flag(ikat, matisse):
+    assert read_pdf.read_page(ikat[7])["has_text_layer"] is False
+    assert read_pdf.read_page(ikat[7])["lines"] == []
+    assert read_pdf.read_page(ikat[7])["images"]       # images still reported
+    assert read_pdf.read_page(matisse[3])["has_text_layer"] is True
+    assert read_pdf.read_page(matisse[3])["word_count"] == 32
+
+
+def test_matisse_back_cover_text_as_is(matisse):
+    texts = [l["text"] for l in read_pdf.read_page(matisse[7])["lines"]]
+    assert "www.nuhome.in" in texts
+
+
+def test_product_page_part2_signals(ikat, matisse):
+    import re
+    for doc, pages in ((ikat, range(1, 6)), (matisse, range(3, 7))):
+        for i in pages:
+            info = read_pdf.read_page(doc[i])
+            sr = [l for l in info["lines"] if re.search(r"\w+\s*\|\s*SR\. NO", l["text"])]
+            assert len(sr) == 1
+            spec = " ".join(l["text"] for l in info["lines"])
+            assert all(k in spec for k in ("Width", "Composition", "Weight"))
+            assert sum(im["area_share"] > 0.30 for im in info["images"]) == 1
+
+
+def test_bad_page_does_not_stop_reading(matisse, monkeypatch):
+    real = read_pdf.read_page
+    def flaky(page):
+        if page.number == 2:
+            raise ValueError("boom")
+        return real(page)
+    monkeypatch.setattr(read_pdf, "read_page", flaky)
+    pages = list(read_pdf.iter_pages(matisse))
+    assert len(pages) == 8
+    assert pages[2] == {"page_index": 2, "error": "ValueError: boom"}
+    assert "lines" in pages[3]
