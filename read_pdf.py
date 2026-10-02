@@ -4,7 +4,11 @@ Reads a PDF page by page and reports, per page: size, text lines rebuilt from
 word positions, images actually drawn on the page, and a text-layer flag.
 It does not classify, rotate images, call any LLM or write output files.
 """
+import argparse
+import json
 import math
+import os
+import sys
 
 import pymupdf
 
@@ -156,3 +160,50 @@ def iter_pages(doc):
             yield read_page(doc[i])
         except Exception as e:
             yield {"page_index": i, "error": f"{type(e).__name__}: {e}"}
+
+
+def read_pdf(path):
+    """Read a whole PDF into {"file", "page_count", "pages"}."""
+    with open_pdf(path) as doc:
+        return {
+            "file": os.path.basename(path),
+            "page_count": doc.page_count,
+            "repaired": doc.is_repaired,  # MuPDF had to rebuild a damaged file
+            "pages": list(iter_pages(doc)),
+        }
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description="Read a PDF and report per-page info as JSON.")
+    parser.add_argument("pdf", help="path to the PDF file")
+    parser.add_argument("-o", "--output", help="write JSON to this file instead of stdout")
+    args = parser.parse_args(argv)
+
+    # MuPDF diagnostics go to stdout by default and would corrupt the JSON.
+    pymupdf.set_messages(stream=sys.stderr)
+    pymupdf.TOOLS.mupdf_display_errors(True)
+    try:
+        result = read_pdf(args.pdf)
+    except ReadError as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 1
+
+    if result["repaired"]:
+        print("warning: PDF was damaged and repaired; content may be incomplete", file=sys.stderr)
+    failed = [p["page_index"] for p in result["pages"] if "error" in p]
+    for p in result["pages"]:
+        if "error" in p:
+            print(f"warning: page {p['page_index']}: {p['error']}", file=sys.stderr)
+
+    text = json.dumps(result, indent=2, ensure_ascii=False)
+    if args.output:
+        with open(args.output, "w", encoding="utf-8") as f:
+            f.write(text + "\n")
+    else:
+        sys.stdout.reconfigure(encoding="utf-8")
+        print(text)
+    return 2 if failed else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

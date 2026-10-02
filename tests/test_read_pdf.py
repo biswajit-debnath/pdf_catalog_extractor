@@ -208,3 +208,76 @@ def test_bad_page_does_not_stop_reading(matisse, monkeypatch):
     assert len(pages) == 8
     assert pages[2] == {"page_index": 2, "error": "ValueError: boom"}
     assert "lines" in pages[3]
+
+
+# ---- Seg 5: CLI and error handling ----
+
+import json
+import subprocess
+import sys
+
+CLI = [sys.executable, os.path.join(os.path.dirname(__file__), "..", "read_pdf.py")]
+
+
+def run_cli(*args):
+    return subprocess.run(CLI + list(args), capture_output=True, text=True, encoding="utf-8")
+
+
+def test_cli_matisse_json_stdout():
+    r = run_cli(MATISSE)
+    assert r.returncode == 0
+    out = json.loads(r.stdout)
+    assert out["repaired"] is False
+    assert out["file"] == "Matisse_sm.pdf" and out["page_count"] == 8 and len(out["pages"]) == 8
+    spec = [l["text"] for l in out["pages"][3]["lines"] if l["text"].startswith("Width")][0]
+    assert "Weight - 910 GLM | Martindale" in spec
+
+
+def test_cli_output_file(tmp_path):
+    out = tmp_path / "ikat.json"
+    r = run_cli(IKAT, "-o", str(out))
+    assert r.returncode == 0 and r.stdout == ""
+    assert len(json.loads(out.read_text(encoding="utf-8"))["pages"]) == 8
+
+
+def test_cli_missing_file():
+    r = run_cli("nope.pdf")
+    assert r.returncode == 1 and "error:" in r.stderr and r.stdout == ""
+
+
+def test_cli_corrupt_file(tmp_path):
+    bad = tmp_path / "bad.pdf"
+    bad.write_bytes(b"this is not a pdf at all" * 50)
+    r = run_cli(str(bad))
+    assert r.returncode == 1 and "error:" in r.stderr
+
+
+def test_cli_truncated_pdf(tmp_path):
+    cut = tmp_path / "cut.pdf"
+    cut.write_bytes(open(MATISSE, "rb").read()[:20000])
+    r = run_cli(str(cut))
+    assert "Traceback" not in r.stderr
+    if r.returncode == 0:   # MuPDF repaired it: must be flagged, not silent
+        assert json.loads(r.stdout)["repaired"] is True
+        assert "repaired" in r.stderr
+    else:
+        assert "error:" in r.stderr
+
+
+def test_cli_encrypted_file(tmp_path):
+    enc = tmp_path / "enc.pdf"
+    doc = pymupdf.open()
+    doc.new_page().insert_text((72, 72), "secret")
+    doc.save(str(enc), encryption=pymupdf.PDF_ENCRYPT_AES_256, user_pw="u", owner_pw="o")
+    r = run_cli(str(enc))
+    assert r.returncode == 1 and "encrypted" in r.stderr
+
+
+def test_owner_password_only_pdf_reads(tmp_path):
+    f = tmp_path / "owner.pdf"
+    doc = pymupdf.open()
+    doc.new_page().insert_text((72, 72), "hello world")
+    doc.save(str(f), encryption=pymupdf.PDF_ENCRYPT_AES_256, user_pw="", owner_pw="o")
+    r = run_cli(str(f))
+    assert r.returncode == 0
+    assert json.loads(r.stdout)["pages"][0]["lines"][0]["text"] == "hello world"

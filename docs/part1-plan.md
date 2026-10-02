@@ -74,6 +74,7 @@ Top-level output of the CLI:
 {
   "file": "Matisse_sm.pdf",
   "page_count": 8,
+  "repaired": false,
   "pages": [ PageInfo, ... ]
 }
 ```
@@ -126,6 +127,7 @@ Field rules:
   - `area_share` = area(bbox ∩ page) / page area, rounded to 4 decimal places.
   - `rotation` is the clockwise angle, rounded to 0/90/180/270, by which the *stored* image is turned when drawn. It is derived as `atan2(b, a)` from the transform. Mirroring isn't classified, but it is visible in `transform`.
 - **`has_text_layer`:** `word_count > 0`. It is also true for invisible text such as OCR layers; that text is reported as-is.
+- **`repaired`** (top level): true when MuPDF had to rebuild a damaged file (e.g. a truncated download). Such a file opens, but pages can come back empty, so the flag lets later parts distrust it. The CLI also prints a warning to stderr.
 - **Failed page:** the record becomes `{"page_index": i, "error": "<message>"}` and reading continues.
 
 ---
@@ -133,7 +135,7 @@ Field rules:
 ## 3. Work segments
 
 Files: `read_pdf.py` (module + CLI, target ~180–230 lines), `tests/test_read_pdf.py`, `requirements.txt`,
-`requirements-dev.txt`, `.gitignore`, `plan/part1-plan.md`.
+`requirements-dev.txt`, `.gitignore`, `docs/part1-plan.md`.
 
 ### Seg 1 — Setup, open PDF, page dimensions (~40 lines)
 - **Goal:** a venv with pinned PyMuPDF, a PDF opener, and page dimensions.
@@ -190,6 +192,8 @@ Files: `read_pdf.py` (module + CLI, target ~180–230 lines), `tests/test_read_p
   - **Output:** JSON with `indent=2` and `ensure_ascii=False`. Stdout is reconfigured to UTF-8 (Windows cp1252 fix).
   - **Missing, corrupt or not-a-document file:** catch `pymupdf.FileDataError` / `RuntimeError`, write a one-line message to stderr, exit 1.
   - **Not a PDF:** checked with `doc.is_pdf`. Error and exit 1.
+  - **Truncated / damaged:** MuPDF repairs these silently, so the output carries `repaired: true` and a stderr warning (exit 0).
+  - **MuPDF diagnostics:** PyMuPDF prints them to stdout by default, which would corrupt the JSON, so the CLI redirects them to stderr.
   - **Encrypted:** if `doc.needs_pass` is true (MuPDF has already tried the empty password), report "encrypted, password required" and exit 1. Files that are owner-password-only open and read normally.
   - **Page failure:** record `{"page_index", "error"}`, warn on stderr, and continue. Exit 0 if every page read, exit 2 if any page failed.
 - **Expected:** valid JSON for all 8 Matisse pages; clean error messages for a garbage file and an encrypted file.
@@ -212,7 +216,7 @@ Tests added in each segment, collected in `tests/test_read_pdf.py`. They skip if
 - **Back covers:**
   - Ikat p7: `has_text_layer` false and no lines.
   - Matisse p7: lines include `www.nuhome.in` (reported as-is).
-- **Rotated page:** open Matisse in memory, `set_rotation(90)` on p3 (not saved). Width and height swap, and the spec line still reads correctly.
+- **Rotated page:** open Matisse in memory, `set_rotation(90)` on p3 (not saved). Width and height swap, every line and image bbox lands inside the displayed page, and the same words and the same largest image come back. (The text itself now runs vertically, so it can't be expected to read as a horizontal line; vertical text stays out of scope.)
 - **CLI:** run via subprocess on Matisse; the output parses as JSON with 8 pages; the garbage file and the encrypted file exit non-zero with a message.
 - **Verify:** `python -m pytest -q`; all green.
 
@@ -231,6 +235,7 @@ Tests added in each segment, collected in `tests/test_read_pdf.py`. They skip if
 - **Soft masks:** reported via `has_mask` and `smask`.
 - **Bboxes overshooting the page:** clipped for `area_share`; the raw bbox is kept.
 - **Corrupt, encrypted or non-PDF input:** a clear error and a non-zero exit.
+- **Truncated / damaged PDFs:** flagged with `repaired`.
 - **One bad page:** recorded as an error; the remaining pages are still read.
 
 **Not handled (out of scope):**
@@ -253,3 +258,16 @@ Tests added in each segment, collected in `tests/test_read_pdf.py`. They skip if
 4. **Ligature expansion** (`ﬂ` → `fl`). I recommend it for downstream keyword matching. OK?
 5. **Output shape.** One JSON document per PDF, not JSON Lines. For 100 pages it is a few hundred KB, and it's easy to read by eye. OK?
 6. **Sample PDFs in git.** They are about 10 MB and the tests depend on them. Commit them, or keep them untracked?
+
+---
+
+## 6. Implementation notes (divergences and findings)
+
+Built as planned, in `read_pdf.py` (209 lines incl. CLI) with 36 tests in `tests/test_read_pdf.py`.
+Differences from the plan above:
+
+- **Docs path:** the plan lives in `docs/`.
+- **`repaired` flag and stdout fix:** added after the truncated-PDF test showed that MuPDF repairs such files silently and prints its diagnostics to stdout (see the edge-case lists).
+- **Rotation convention verified:** with a synthetic image whose top-left corner is red, a corner that ends up top-right reports `rotation: 90`, one that ends up bottom-left reports `270`, and bottom-right reports `180`. So `rotation` is the clockwise angle applied to the stored image. (Note PyMuPDF's own `insert_image(rotate=90)` turns counter-clockwise.)
+- **Rotated-page test:** rewritten to check displayed-space coordinates instead of a horizontal spec line (see section 3, Seg 6).
+- **Resolved open questions:** went with the recommended defaults: column split on, ligatures expanded, `rotation`/`transform` included, one JSON document per PDF. Sample PDFs are left untracked.
