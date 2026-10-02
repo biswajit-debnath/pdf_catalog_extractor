@@ -98,3 +98,62 @@ def test_rotated_page_lines_in_displayed_space():
     # same words either way
     words = lambda ls: sorted(" ".join(l["text"] for l in ls).split())
     assert words(rotated) == words(unrotated)
+
+
+def big_images(doc, i):
+    return [im for im in read_pdf.list_images(doc[i]) if im["area_share"] > 0.30]
+
+
+@pytest.mark.parametrize("i", [1, 2, 3, 4, 5])
+def test_ikat_product_pages_one_big_rotated_image(ikat, i):
+    imgs = read_pdf.list_images(ikat[i])
+    big = [im for im in imgs if im["area_share"] > 0.30]
+    assert len(big) == 1
+    assert big[0]["rotation"] == 90
+    assert big[0]["area_share"] >= 0.99
+    assert len(imgs) - len(big) >= 2  # logo/frame/band stay separate layers
+
+
+@pytest.mark.parametrize("i", [3, 4, 5, 6])
+def test_matisse_product_pages_one_big_rotated_image(matisse, i):
+    imgs = read_pdf.list_images(matisse[i])
+    big = [im for im in imgs if im["area_share"] > 0.30]
+    assert len(big) == 1
+    assert big[0]["rotation"] == 180
+    assert 0.7 < big[0]["area_share"] < 0.85
+    assert len(imgs) - len(big) >= 2
+
+
+def test_ikat_cover_reused_and_undrawn_images(ikat):
+    xrefs = [im["xref"] for im in read_pdf.list_images(ikat[0])]
+    assert 23 not in xrefs            # referenced by the page, never drawn
+    assert xrefs.count(24) == 2       # drawn twice -> two placements
+
+
+def test_grid_pages_have_no_big_image(ikat, matisse):
+    assert big_images(ikat, 6) == []
+    assert big_images(matisse, 2) == []
+    assert len(read_pdf.list_images(ikat[6])) >= 4
+    assert len(read_pdf.list_images(matisse[2])) >= 15
+
+
+def test_mask_reported(matisse):
+    band = [im for im in read_pdf.list_images(matisse[3]) if im["xref"] == 406][0]
+    assert band["has_mask"] and band["smask"] == 407
+
+
+def test_area_share_clipped_to_page(matisse):
+    for i in range(8):
+        for im in read_pdf.list_images(matisse[i]):
+            assert 0 <= im["area_share"] <= 1
+
+
+def test_rotated_page_images_in_displayed_space():
+    doc = pymupdf.open(MATISSE)
+    before = max(read_pdf.list_images(doc[3]), key=lambda im: im["area_share"])
+    doc[3].set_rotation(90)
+    after = max(read_pdf.list_images(doc[3]), key=lambda im: im["area_share"])
+    assert after["xref"] == before["xref"]
+    assert after["area_share"] == pytest.approx(before["area_share"], abs=0.01)
+    assert pymupdf.Rect(after["bbox"]).width == pytest.approx(pymupdf.Rect(before["bbox"]).height, abs=0.1)
+    assert after["rotation"] == (before["rotation"] + 90) % 360

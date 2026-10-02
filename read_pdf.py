@@ -4,6 +4,8 @@ Reads a PDF page by page and reports, per page: size, text lines rebuilt from
 word positions, images actually drawn on the page, and a text-layer flag.
 It does not classify, rotate images, call any LLM or write output files.
 """
+import math
+
 import pymupdf
 
 
@@ -91,3 +93,41 @@ def rebuild_lines(page):
             current.append(w)
         lines.append(current)
     return [_make_line(ws) for ws in lines]
+
+
+def _rotation_deg(transform):
+    """Clockwise angle (0/90/180/270) the stored image is turned by when drawn."""
+    a, b = transform[0], transform[1]
+    return round(math.degrees(math.atan2(b, a)) / 90) % 4 * 90
+
+
+def list_images(page):
+    """Images actually drawn on the page, in draw order, one entry per placement.
+
+    Reports the image as stored (no pixel data is loaded or rotated). Bbox is
+    in displayed-page coordinates; area_share uses the bbox clipped to the page.
+    """
+    smask = {item[0]: item[1] for item in page.get_images(full=True)}
+    page_rect = page.rect
+    page_area = page_rect.width * page_rect.height
+    images = []
+    for info in page.get_image_info(xrefs=True):
+        bbox = pymupdf.Rect(info["bbox"])
+        matrix = pymupdf.Matrix(info["transform"])
+        if page.rotation:
+            bbox = (bbox * page.rotation_matrix).normalize()
+            matrix = matrix * page.rotation_matrix
+        transform = [matrix.a, matrix.b, matrix.c, matrix.d, matrix.e, matrix.f]
+        clipped = bbox & page_rect  # empty rect if fully off-page
+        images.append({
+            "xref": info["xref"],
+            "smask": smask.get(info["xref"], 0),
+            "width": info["width"],
+            "height": info["height"],
+            "bbox": [round(v, 2) for v in bbox],
+            "area_share": round(abs(clipped) / page_area, 4),
+            "transform": [round(v, 4) for v in transform],
+            "rotation": _rotation_deg(transform),
+            "has_mask": info["has-mask"],
+        })
+    return images
