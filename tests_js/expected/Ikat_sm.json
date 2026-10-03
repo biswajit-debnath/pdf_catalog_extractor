@@ -1,0 +1,1027 @@
+{
+  "file": "Ikat_sm.pdf",
+  "page_count": 8,
+  "repaired": false,
+  "pages": [
+    {
+      "page_index": 0,
+      "width": 841.89,
+      "height": 1190.55,
+      "area": 1002312.2,
+      "rotation": 0,
+      "has_text_layer": true,
+      "word_count": 1,
+      "lines": [
+        {
+          "text": "IKAT",
+          "bbox": [
+            335.0,
+            1042.46,
+            494.51,
+            1134.58
+          ]
+        }
+      ],
+      "images": [
+        {
+          "xref": 22,
+          "smask": 0,
+          "width": 1740,
+          "height": 2463,
+          "bbox": [
+            3.3,
+            4.18,
+            838.56,
+            1186.46
+          ],
+          "area_share": 0.9852,
+          "transform": [
+            835.267,
+            0.0,
+            -0.0,
+            1182.28,
+            3.2964,
+            4.179
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 24,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            249.54,
+            84.57,
+            465.54,
+            173.85
+          ],
+          "area_share": 0.0192,
+          "transform": [
+            216.0,
+            0.0,
+            -0.0,
+            89.28,
+            249.54,
+            84.57
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 24,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            408.83,
+            77.67,
+            624.83,
+            166.95
+          ],
+          "area_share": 0.0192,
+          "transform": [
+            216.0,
+            0.0,
+            -0.0,
+            89.28,
+            408.83,
+            77.6701
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 25,
+          "smask": 26,
+          "width": 1750,
+          "height": 625,
+          "bbox": [
+            205.69,
+            36.48,
+            660.69,
+            198.98
+          ],
+          "area_share": 0.0738,
+          "transform": [
+            455.0,
+            0.0,
+            -0.0,
+            162.5,
+            205.69,
+            36.48
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    },
+    {
+      "page_index": 1,
+      "width": 841.89,
+      "height": 1190.55,
+      "area": 1002312.2,
+      "rotation": 0,
+      "has_text_layer": true,
+      "word_count": 22,
+      "lines": [
+        {
+          "text": "ZANY| SR. NO :- 401",
+          "bbox": [
+            326.67,
+            1030.92,
+            514.15,
+            1052.92
+          ]
+        },
+        {
+          "text": "Width -137 CMS | Composition - 70% Polyester+ 16% Cott. +14% Linen | Weight - 565 GLM",
+          "bbox": [
+            65.43,
+            1072.71,
+            775.26,
+            1090.88
+          ]
+        }
+      ],
+      "images": [
+        {
+          "xref": 40,
+          "smask": 0,
+          "width": 1545,
+          "height": 1092,
+          "bbox": [
+            -0.02,
+            -0.25,
+            841.88,
+            1190.9
+          ],
+          "area_share": 1.0,
+          "transform": [
+            0.0,
+            1191.15,
+            -841.897,
+            -0.0,
+            841.8788,
+            -0.25
+          ],
+          "rotation": 90,
+          "has_mask": false
+        },
+        {
+          "xref": 42,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            520.57,
+            48.37,
+            736.57,
+            137.65
+          ],
+          "area_share": 0.0192,
+          "transform": [
+            216.0,
+            0.0,
+            -0.0,
+            89.28,
+            520.57,
+            48.37
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 42,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            573.67,
+            53.67,
+            789.67,
+            142.95
+          ],
+          "area_share": 0.0192,
+          "transform": [
+            216.0,
+            0.0,
+            -0.0,
+            89.28,
+            573.67,
+            53.6701
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 43,
+          "smask": 44,
+          "width": 1750,
+          "height": 625,
+          "bbox": [
+            483.48,
+            31.18,
+            822.48,
+            152.25
+          ],
+          "area_share": 0.0409,
+          "transform": [
+            339.0,
+            0.0,
+            -0.0,
+            121.07,
+            483.48,
+            31.18
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    },
+    {
+      "page_index": 2,
+      "width": 841.89,
+      "height": 1190.55,
+      "area": 1002312.2,
+      "rotation": 0,
+      "has_text_layer": true,
+      "word_count": 23,
+      "lines": [
+        {
+          "text": "MOD | SR. NO :- 301",
+          "bbox": [
+            327.22,
+            1030.92,
+            513.36,
+            1052.92
+          ]
+        },
+        {
+          "text": "Width -137 CMS | Composition - 70% Polyester+ 16% Cott. +14% Linen | Weight - 565 GLM",
+          "bbox": [
+            65.43,
+            1072.71,
+            775.26,
+            1090.88
+          ]
+        }
+      ],
+      "images": [
+        {
+          "xref": 53,
+          "smask": 0,
+          "width": 1624,
+          "height": 1148,
+          "bbox": [
+            -0.02,
+            -0.17,
+            841.88,
+            1190.81
+          ],
+          "area_share": 1.0,
+          "transform": [
+            0.0,
+            1190.98,
+            -841.897,
+            -0.0,
+            841.8788,
+            -0.1699
+          ],
+          "rotation": 90,
+          "has_mask": false
+        },
+        {
+          "xref": 55,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            517.54,
+            54.27,
+            733.54,
+            143.55
+          ],
+          "area_share": 0.0192,
+          "transform": [
+            216.0,
+            0.0,
+            -0.0,
+            89.28,
+            517.54,
+            54.2701
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 55,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            582.77,
+            50.47,
+            798.77,
+            139.75
+          ],
+          "area_share": 0.0192,
+          "transform": [
+            216.0,
+            0.0,
+            -0.0,
+            89.28,
+            582.77,
+            50.47
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 51,
+          "smask": 52,
+          "width": 1750,
+          "height": 625,
+          "bbox": [
+            480.83,
+            29.28,
+            819.83,
+            150.35
+          ],
+          "area_share": 0.0409,
+          "transform": [
+            339.0,
+            0.0,
+            -0.0,
+            121.07,
+            480.83,
+            29.2801
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    },
+    {
+      "page_index": 3,
+      "width": 841.89,
+      "height": 1190.55,
+      "area": 1002312.2,
+      "rotation": 0,
+      "has_text_layer": true,
+      "word_count": 23,
+      "lines": [
+        {
+          "text": "IKAT | SR. NO :- 101",
+          "bbox": [
+            327.41,
+            1030.92,
+            513.11,
+            1052.92
+          ]
+        },
+        {
+          "text": "Width -137 CMS | Composition - 70% Polyester+ 16% Cott. +14% Linen | Weight - 565 GLM",
+          "bbox": [
+            65.43,
+            1072.71,
+            775.26,
+            1090.88
+          ]
+        }
+      ],
+      "images": [
+        {
+          "xref": 66,
+          "smask": 0,
+          "width": 2480,
+          "height": 1755,
+          "bbox": [
+            -0.29,
+            0.06,
+            842.15,
+            1190.58
+          ],
+          "area_share": 0.9999,
+          "transform": [
+            0.0,
+            1190.52,
+            -842.432,
+            -0.0,
+            842.1458,
+            0.0601
+          ],
+          "rotation": 90,
+          "has_mask": false
+        },
+        {
+          "xref": 63,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            516.78,
+            47.37,
+            732.78,
+            136.65
+          ],
+          "area_share": 0.0192,
+          "transform": [
+            216.0,
+            0.0,
+            -0.0,
+            89.28,
+            516.78,
+            47.37
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 63,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            578.98,
+            54.27,
+            794.98,
+            143.55
+          ],
+          "area_share": 0.0192,
+          "transform": [
+            216.0,
+            0.0,
+            -0.0,
+            89.28,
+            578.98,
+            54.2701
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 64,
+          "smask": 65,
+          "width": 1750,
+          "height": 625,
+          "bbox": [
+            483.86,
+            30.08,
+            822.86,
+            151.15
+          ],
+          "area_share": 0.0409,
+          "transform": [
+            339.0,
+            0.0,
+            -0.0,
+            121.07,
+            483.86,
+            30.08
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    },
+    {
+      "page_index": 4,
+      "width": 841.89,
+      "height": 1190.55,
+      "area": 1002312.2,
+      "rotation": 0,
+      "has_text_layer": true,
+      "word_count": 23,
+      "lines": [
+        {
+          "text": "ABR | SR. NO :- 207",
+          "bbox": [
+            330.56,
+            1030.92,
+            510.63,
+            1052.92
+          ]
+        },
+        {
+          "text": "Width -137 CMS | Composition - 70% Polyester+ 16% Cott. +14% Linen | Weight - 565 GLM",
+          "bbox": [
+            65.43,
+            1072.71,
+            775.26,
+            1090.88
+          ]
+        }
+      ],
+      "images": [
+        {
+          "xref": 77,
+          "smask": 0,
+          "width": 2481,
+          "height": 1754,
+          "bbox": [
+            -0.02,
+            -0.16,
+            841.88,
+            1190.8
+          ],
+          "area_share": 1.0,
+          "transform": [
+            0.0,
+            1190.96,
+            -841.897,
+            -0.0,
+            841.8788,
+            -0.1599
+          ],
+          "rotation": 90,
+          "has_mask": false
+        },
+        {
+          "xref": 74,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            524.37,
+            50.27,
+            740.37,
+            139.55
+          ],
+          "area_share": 0.0192,
+          "transform": [
+            216.0,
+            0.0,
+            -0.0,
+            89.28,
+            524.37,
+            50.2701
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 74,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            579.74,
+            54.07,
+            795.74,
+            143.35
+          ],
+          "area_share": 0.0192,
+          "transform": [
+            216.0,
+            0.0,
+            -0.0,
+            89.28,
+            579.74,
+            54.0701
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 75,
+          "smask": 76,
+          "width": 1750,
+          "height": 625,
+          "bbox": [
+            488.41,
+            30.68,
+            827.41,
+            151.75
+          ],
+          "area_share": 0.0409,
+          "transform": [
+            339.0,
+            0.0,
+            -0.0,
+            121.07,
+            488.41,
+            30.68
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    },
+    {
+      "page_index": 5,
+      "width": 841.89,
+      "height": 1190.55,
+      "area": 1002312.2,
+      "rotation": 0,
+      "has_text_layer": true,
+      "word_count": 19,
+      "lines": [
+        {
+          "text": "ABR | SR. NO :- 202",
+          "bbox": [
+            330.86,
+            1030.92,
+            510.93,
+            1052.92
+          ]
+        },
+        {
+          "text": "Width -137 CMS | Composition - 100% Polyester | Weight - 525 GLM",
+          "bbox": [
+            154.77,
+            1072.71,
+            685.92,
+            1090.88
+          ]
+        }
+      ],
+      "images": [
+        {
+          "xref": 88,
+          "smask": 0,
+          "width": 2480,
+          "height": 1755,
+          "bbox": [
+            -0.21,
+            0.06,
+            842.06,
+            1190.58
+          ],
+          "area_share": 0.9999,
+          "transform": [
+            0.0,
+            1190.52,
+            -842.27,
+            -0.0,
+            842.0646,
+            0.0601
+          ],
+          "rotation": 90,
+          "has_mask": false
+        },
+        {
+          "xref": 85,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            525.13,
+            51.77,
+            741.13,
+            141.05
+          ],
+          "area_share": 0.0192,
+          "transform": [
+            216.0,
+            0.0,
+            -0.0,
+            89.28,
+            525.13,
+            51.7701
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 85,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            588.84,
+            49.47,
+            804.84,
+            138.75
+          ],
+          "area_share": 0.0192,
+          "transform": [
+            216.0,
+            0.0,
+            -0.0,
+            89.28,
+            588.84,
+            49.47
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 86,
+          "smask": 87,
+          "width": 1750,
+          "height": 625,
+          "bbox": [
+            481.59,
+            32.88,
+            820.59,
+            153.95
+          ],
+          "area_share": 0.0409,
+          "transform": [
+            339.0,
+            0.0,
+            -0.0,
+            121.07,
+            481.59,
+            32.8801
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    },
+    {
+      "page_index": 6,
+      "width": 841.89,
+      "height": 1190.55,
+      "area": 1002312.2,
+      "rotation": 0,
+      "has_text_layer": true,
+      "word_count": 24,
+      "lines": [
+        {
+          "text": "ZANT | SR. NO :- 401",
+          "bbox": [
+            205.4,
+            588.8,
+            398.23,
+            610.8
+          ]
+        },
+        {
+          "text": "MOD | SR. NO :- 301",
+          "bbox": [
+            596.01,
+            588.8,
+            782.16,
+            610.8
+          ]
+        },
+        {
+          "text": "IKAT | SR. NO :- 101",
+          "bbox": [
+            208.8,
+            1067.61,
+            394.51,
+            1089.61
+          ]
+        },
+        {
+          "text": "ABR | SR. NO :- 207",
+          "bbox": [
+            598.85,
+            1067.61,
+            779.93,
+            1089.61
+          ]
+        }
+      ],
+      "images": [
+        {
+          "xref": 94,
+          "smask": 0,
+          "width": 970,
+          "height": 756,
+          "bbox": [
+            44.52,
+            641.91,
+            407.24,
+            1107.47
+          ],
+          "area_share": 0.1685,
+          "transform": [
+            0.0,
+            465.56,
+            -362.721,
+            -0.0,
+            407.2373,
+            641.908
+          ],
+          "rotation": 90,
+          "has_mask": false
+        },
+        {
+          "xref": 95,
+          "smask": 0,
+          "width": 971,
+          "height": 755,
+          "bbox": [
+            432.2,
+            641.65,
+            794.72,
+            1107.73
+          ],
+          "area_share": 0.1686,
+          "transform": [
+            0.0,
+            466.085,
+            -362.515,
+            -0.0,
+            794.719,
+            641.6461
+          ],
+          "rotation": 90,
+          "has_mask": false
+        },
+        {
+          "xref": 96,
+          "smask": 0,
+          "width": 970,
+          "height": 754,
+          "bbox": [
+            44.8,
+            163.05,
+            406.95,
+            628.71
+          ],
+          "area_share": 0.1683,
+          "transform": [
+            0.0,
+            -465.66,
+            362.155,
+            0.0,
+            44.799,
+            628.707
+          ],
+          "rotation": 270,
+          "has_mask": false
+        },
+        {
+          "xref": 97,
+          "smask": 0,
+          "width": 970,
+          "height": 754,
+          "bbox": [
+            432.2,
+            163.05,
+            794.36,
+            628.7
+          ],
+          "area_share": 0.1682,
+          "transform": [
+            0.0,
+            -465.646,
+            362.155,
+            0.0,
+            432.204,
+            628.7001
+          ],
+          "rotation": 270,
+          "has_mask": false
+        },
+        {
+          "xref": 100,
+          "smask": 101,
+          "width": 1650,
+          "height": 518,
+          "bbox": [
+            201.99,
+            6.44,
+            654.99,
+            148.65
+          ],
+          "area_share": 0.0643,
+          "transform": [
+            453.0,
+            0.0,
+            -0.0,
+            142.21,
+            201.99,
+            6.44
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    },
+    {
+      "page_index": 7,
+      "width": 841.89,
+      "height": 1190.55,
+      "area": 1002312.2,
+      "rotation": 0,
+      "has_text_layer": false,
+      "word_count": 0,
+      "lines": [],
+      "images": [
+        {
+          "xref": 109,
+          "smask": 0,
+          "width": 1755,
+          "height": 2480,
+          "bbox": [
+            -0.33,
+            0.18,
+            841.83,
+            1190.7
+          ],
+          "area_share": 0.9998,
+          "transform": [
+            842.164,
+            0.0,
+            -0.0,
+            1190.52,
+            -0.3323,
+            0.1788
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 111,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            6.13,
+            931.04,
+            462.13,
+            1119.52
+          ],
+          "area_share": 0.0857,
+          "transform": [
+            456.0,
+            0.0,
+            -0.0,
+            188.48,
+            6.1313,
+            931.0421
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 111,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            375.1,
+            930.47,
+            835.1,
+            1120.6
+          ],
+          "area_share": 0.0873,
+          "transform": [
+            460.0,
+            0.0,
+            -0.0,
+            190.13,
+            375.1,
+            930.469
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 112,
+          "smask": 113,
+          "width": 1750,
+          "height": 625,
+          "bbox": [
+            205.02,
+            904.32,
+            663.02,
+            1067.89
+          ],
+          "area_share": 0.0747,
+          "transform": [
+            458.0,
+            0.0,
+            -0.0,
+            163.57,
+            205.02,
+            904.32
+          ],
+          "rotation": 0,
+          "has_mask": true
+        },
+        {
+          "xref": 114,
+          "smask": 115,
+          "width": 798,
+          "height": 313,
+          "bbox": [
+            232.06,
+            1003.06,
+            631.06,
+            1159.56
+          ],
+          "area_share": 0.0623,
+          "transform": [
+            399.0,
+            0.0,
+            -0.0,
+            156.5,
+            232.06,
+            1003.0591
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    }
+  ]
+}

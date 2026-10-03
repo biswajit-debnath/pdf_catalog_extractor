@@ -1,0 +1,1590 @@
+{
+  "file": "Matisse_sm.pdf",
+  "page_count": 8,
+  "repaired": false,
+  "pages": [
+    {
+      "page_index": 0,
+      "width": 828.0,
+      "height": 1224.0,
+      "area": 1013472.0,
+      "rotation": 0,
+      "has_text_layer": true,
+      "word_count": 3,
+      "lines": [
+        {
+          "text": "matisse",
+          "bbox": [
+            296.93,
+            1072.15,
+            545.78,
+            1168.77
+          ]
+        },
+        {
+          "text": "Decorative Prints",
+          "bbox": [
+            310.32,
+            1146.71,
+            531.52,
+            1184.47
+          ]
+        }
+      ],
+      "images": [
+        {
+          "xref": 102,
+          "smask": 0,
+          "width": 1455,
+          "height": 2024,
+          "bbox": [
+            71.63,
+            118.72,
+            770.07,
+            1090.34
+          ],
+          "area_share": 0.6696,
+          "transform": [
+            698.4441,
+            0.0,
+            -0.0,
+            971.6213,
+            71.6258,
+            118.7176
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 104,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            277.09,
+            79.47,
+            452.09,
+            151.8
+          ],
+          "area_share": 0.0125,
+          "transform": [
+            175.0,
+            0.0,
+            -0.0,
+            72.333,
+            277.09,
+            79.467
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 104,
+          "smask": 0,
+          "width": 75,
+          "height": 31,
+          "bbox": [
+            379.79,
+            77.97,
+            554.79,
+            150.3
+          ],
+          "area_share": 0.0125,
+          "transform": [
+            175.0,
+            0.0,
+            -0.0,
+            72.333,
+            379.79,
+            77.967
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 105,
+          "smask": 106,
+          "width": 1750,
+          "height": 625,
+          "bbox": [
+            240.87,
+            47.03,
+            593.87,
+            173.1
+          ],
+          "area_share": 0.0439,
+          "transform": [
+            353.0,
+            0.0,
+            -0.0,
+            126.07,
+            240.87,
+            47.03
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    },
+    {
+      "page_index": 1,
+      "width": 828.0,
+      "height": 1224.0,
+      "area": 1013472.0,
+      "rotation": 0,
+      "has_text_layer": true,
+      "word_count": 102,
+      "lines": [
+        {
+          "text": "matisse",
+          "bbox": [
+            247.6,
+            135.77,
+            796.88,
+            349.05
+          ]
+        },
+        {
+          "text": "Decorative Prints",
+          "bbox": [
+            453.57,
+            319.85,
+            729.62,
+            366.97
+          ]
+        },
+        {
+          "text": "The Matisse Collection of bold, colorful printed upholstery",
+          "bbox": [
+            41.23,
+            860.17,
+            442.48,
+            879.07
+          ]
+        },
+        {
+          "text": "fabrics celebrates the expressive artistry of Henri Matisse,",
+          "bbox": [
+            41.23,
+            883.96,
+            442.48,
+            902.86
+          ]
+        },
+        {
+          "text": "bringing dynamic shapes, fluid lines, and vibrant hues to",
+          "bbox": [
+            41.23,
+            907.74,
+            442.48,
+            926.64
+          ]
+        },
+        {
+          "text": "interior spaces. Inspired by his iconic cut-outs and abstract",
+          "bbox": [
+            41.22,
+            931.53,
+            442.48,
+            950.43
+          ]
+        },
+        {
+          "text": "compositions, this collection features striking botanical",
+          "bbox": [
+            41.22,
+            955.32,
+            442.46,
+            974.22
+          ]
+        },
+        {
+          "text": "forms, free-flowing silhouettes, and playful patterns in a rich",
+          "bbox": [
+            41.22,
+            979.1,
+            442.47,
+            998.0
+          ]
+        },
+        {
+          "text": "palette of deep blues, fiery reds, sunny yellows, and lush",
+          "bbox": [
+            41.22,
+            1002.89,
+            442.46,
+            1021.79
+          ]
+        },
+        {
+          "text": "greens. Printed on durable cotton, linen blends, and textured",
+          "bbox": [
+            41.22,
+            1026.68,
+            442.46,
+            1045.58
+          ]
+        },
+        {
+          "text": "weaves, these fabrics are perfect for statement furniture,",
+          "bbox": [
+            41.21,
+            1050.46,
+            442.46,
+            1069.36
+          ]
+        },
+        {
+          "text": "accent chairs, cushions, and ottomans. The Matisse",
+          "bbox": [
+            41.21,
+            1074.25,
+            442.46,
+            1093.15
+          ]
+        },
+        {
+          "text": "Collection transforms interiors with its artistic energy, making",
+          "bbox": [
+            41.21,
+            1098.04,
+            442.46,
+            1116.94
+          ]
+        },
+        {
+          "text": "every piece a canvas of creativity and style.",
+          "bbox": [
+            41.21,
+            1121.82,
+            324.09,
+            1140.72
+          ]
+        }
+      ],
+      "images": [
+        {
+          "xref": 125,
+          "smask": 0,
+          "width": 835,
+          "height": 1392,
+          "bbox": [
+            34.58,
+            167.02,
+            435.39,
+            835.28
+          ],
+          "area_share": 0.2643,
+          "transform": [
+            400.8091,
+            0.0,
+            -0.0,
+            668.2646,
+            34.5823,
+            167.0165
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 126,
+          "smask": 0,
+          "width": 696,
+          "height": 958,
+          "bbox": [
+            459.43,
+            704.62,
+            793.72,
+            1164.89
+          ],
+          "area_share": 0.1518,
+          "transform": [
+            -334.2964,
+            -0.0,
+            0.0,
+            -460.2655,
+            793.7248,
+            1164.8856
+          ],
+          "rotation": 180,
+          "has_mask": false
+        },
+        {
+          "xref": 127,
+          "smask": 0,
+          "width": 319,
+          "height": 148,
+          "bbox": [
+            20.3,
+            22.69,
+            261.3,
+            134.5
+          ],
+          "area_share": 0.0266,
+          "transform": [
+            241.0,
+            0.0,
+            -0.0,
+            111.81,
+            20.303,
+            22.69
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 128,
+          "smask": 129,
+          "width": 1650,
+          "height": 518,
+          "bbox": [
+            35.21,
+            39.65,
+            304.21,
+            124.1
+          ],
+          "area_share": 0.0224,
+          "transform": [
+            269.0,
+            0.0,
+            -0.0,
+            84.45,
+            35.212,
+            39.65
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    },
+    {
+      "page_index": 2,
+      "width": 828.0,
+      "height": 1224.0,
+      "area": 1013472.0,
+      "rotation": 0,
+      "has_text_layer": true,
+      "word_count": 56,
+      "lines": [
+        {
+          "text": "matisse",
+          "bbox": [
+            630.8,
+            21.96,
+            774.98,
+            77.95
+          ]
+        },
+        {
+          "text": "matisse - shade-1 thumbnail",
+          "bbox": [
+            251.59,
+            132.18,
+            563.55,
+            162.64
+          ]
+        },
+        {
+          "text": "matisee - 01",
+          "bbox": [
+            128.65,
+            317.27,
+            179.67,
+            327.28
+          ]
+        },
+        {
+          "text": "henry - 101",
+          "bbox": [
+            382.42,
+            316.2,
+            429.33,
+            326.21
+          ]
+        },
+        {
+          "text": "matisee - 02",
+          "bbox": [
+            631.38,
+            317.27,
+            682.4,
+            327.28
+          ]
+        },
+        {
+          "text": "matisee - 03",
+          "bbox": [
+            128.04,
+            493.33,
+            179.06,
+            503.34
+          ]
+        },
+        {
+          "text": "matisee - 04",
+          "bbox": [
+            379.55,
+            491.76,
+            430.58,
+            501.77
+          ]
+        },
+        {
+          "text": "matisee - 05",
+          "bbox": [
+            630.58,
+            491.76,
+            681.61,
+            501.77
+          ]
+        },
+        {
+          "text": "matisee - 06",
+          "bbox": [
+            128.0,
+            668.6,
+            179.03,
+            678.61
+          ]
+        },
+        {
+          "text": "matisee - 07",
+          "bbox": [
+            379.55,
+            667.03,
+            430.58,
+            677.04
+          ]
+        },
+        {
+          "text": "henry - 102",
+          "bbox": [
+            632.66,
+            665.97,
+            679.57,
+            675.97
+          ]
+        },
+        {
+          "text": "matisee - 08",
+          "bbox": [
+            128.0,
+            843.88,
+            179.03,
+            853.88
+          ]
+        },
+        {
+          "text": "matisee - 09",
+          "bbox": [
+            379.55,
+            842.31,
+            430.57,
+            852.31
+          ]
+        },
+        {
+          "text": "matisee - 10",
+          "bbox": [
+            630.56,
+            842.31,
+            681.59,
+            852.31
+          ]
+        },
+        {
+          "text": "matisee - 11",
+          "bbox": [
+            128.34,
+            1019.15,
+            178.68,
+            1029.16
+          ]
+        },
+        {
+          "text": "henry - 103",
+          "bbox": [
+            381.61,
+            1016.51,
+            428.52,
+            1026.52
+          ]
+        },
+        {
+          "text": "03",
+          "bbox": [
+            39.05,
+            1168.8,
+            64.6,
+            1198.19
+          ]
+        },
+        {
+          "text": "Click on thumbnail to view the fabric design.",
+          "bbox": [
+            500.71,
+            1171.74,
+            812.66,
+            1191.34
+          ]
+        }
+      ],
+      "images": [
+        {
+          "xref": 299,
+          "smask": 300,
+          "width": 60,
+          "height": 47,
+          "bbox": [
+            471.1,
+            1171.89,
+            500.02,
+            1194.55
+          ],
+          "area_share": 0.0006,
+          "transform": [
+            28.9255,
+            0.0,
+            -0.0,
+            22.6583,
+            471.0964,
+            1171.8878
+          ],
+          "rotation": 0,
+          "has_mask": true
+        },
+        {
+          "xref": 301,
+          "smask": 0,
+          "width": 474,
+          "height": 307,
+          "bbox": [
+            39.89,
+            199.49,
+            267.67,
+            346.93
+          ],
+          "area_share": 0.0331,
+          "transform": [
+            -227.7798,
+            -0.0,
+            0.0,
+            -147.4368,
+            267.67,
+            346.9312
+          ],
+          "rotation": 180,
+          "has_mask": false
+        },
+        {
+          "xref": 302,
+          "smask": 0,
+          "width": 470,
+          "height": 311,
+          "bbox": [
+            291.92,
+            197.83,
+            518.74,
+            348.6
+          ],
+          "area_share": 0.0337,
+          "transform": [
+            -225.841,
+            -1.4783,
+            0.9772,
+            -149.2953,
+            517.7612,
+            348.5995
+          ],
+          "rotation": 180,
+          "has_mask": false
+        },
+        {
+          "xref": 303,
+          "smask": 0,
+          "width": 474,
+          "height": 308,
+          "bbox": [
+            39.89,
+            375.34,
+            267.67,
+            523.2
+          ],
+          "area_share": 0.0332,
+          "transform": [
+            227.7798,
+            0.0,
+            -0.0,
+            147.8571,
+            39.8903,
+            375.344
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 304,
+          "smask": 0,
+          "width": 474,
+          "height": 306,
+          "bbox": [
+            291.44,
+            374.16,
+            519.22,
+            521.24
+          ],
+          "area_share": 0.0331,
+          "transform": [
+            227.7797,
+            0.0,
+            -0.0,
+            147.0805,
+            291.4396,
+            374.1623
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 305,
+          "smask": 0,
+          "width": 474,
+          "height": 308,
+          "bbox": [
+            39.89,
+            550.57,
+            267.67,
+            698.53
+          ],
+          "area_share": 0.0333,
+          "transform": [
+            227.7797,
+            0.0,
+            -0.0,
+            147.9637,
+            39.8903,
+            550.5654
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 306,
+          "smask": 0,
+          "width": 474,
+          "height": 307,
+          "bbox": [
+            291.44,
+            549.2,
+            519.22,
+            696.75
+          ],
+          "area_share": 0.0332,
+          "transform": [
+            227.7797,
+            0.0,
+            -0.0,
+            147.553,
+            291.4396,
+            549.2007
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 307,
+          "smask": 0,
+          "width": 474,
+          "height": 307,
+          "bbox": [
+            39.89,
+            726.02,
+            267.67,
+            873.62
+          ],
+          "area_share": 0.0332,
+          "transform": [
+            227.7797,
+            0.0,
+            -0.0,
+            147.5981,
+            39.8903,
+            726.0223
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 308,
+          "smask": 0,
+          "width": 474,
+          "height": 307,
+          "bbox": [
+            291.44,
+            724.54,
+            519.22,
+            871.96
+          ],
+          "area_share": 0.0331,
+          "transform": [
+            227.7797,
+            0.0,
+            -0.0,
+            147.4157,
+            291.4396,
+            724.5434
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 309,
+          "smask": 0,
+          "width": 474,
+          "height": 308,
+          "bbox": [
+            39.89,
+            901.11,
+            267.67,
+            1049.08
+          ],
+          "area_share": 0.0333,
+          "transform": [
+            227.7797,
+            0.0,
+            -0.0,
+            147.9721,
+            39.8903,
+            901.11
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 310,
+          "smask": 0,
+          "width": 474,
+          "height": 307,
+          "bbox": [
+            291.44,
+            899.81,
+            519.22,
+            1047.24
+          ],
+          "area_share": 0.0331,
+          "transform": [
+            227.7797,
+            0.0,
+            -0.0,
+            147.4275,
+            291.4396,
+            899.8121
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 311,
+          "smask": 0,
+          "width": 474,
+          "height": 308,
+          "bbox": [
+            542.45,
+            199.26,
+            770.23,
+            347.16
+          ],
+          "area_share": 0.0332,
+          "transform": [
+            -227.7798,
+            -0.0,
+            0.0,
+            -147.9024,
+            770.2347,
+            347.164
+          ],
+          "rotation": 180,
+          "has_mask": false
+        },
+        {
+          "xref": 312,
+          "smask": 0,
+          "width": 474,
+          "height": 307,
+          "bbox": [
+            542.46,
+            373.99,
+            770.23,
+            521.41
+          ],
+          "area_share": 0.0331,
+          "transform": [
+            227.7797,
+            0.0,
+            -0.0,
+            147.4215,
+            542.4551,
+            373.9919
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 313,
+          "smask": 0,
+          "width": 474,
+          "height": 307,
+          "bbox": [
+            542.46,
+            549.23,
+            770.23,
+            696.72
+          ],
+          "area_share": 0.0331,
+          "transform": [
+            227.7797,
+            0.0,
+            -0.0,
+            147.4866,
+            542.4551,
+            549.2339
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 314,
+          "smask": 0,
+          "width": 474,
+          "height": 307,
+          "bbox": [
+            542.46,
+            724.56,
+            770.72,
+            871.94
+          ],
+          "area_share": 0.0332,
+          "transform": [
+            228.2602,
+            0.0,
+            -0.0,
+            147.3841,
+            542.4551,
+            724.5592
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 315,
+          "smask": 0,
+          "width": 319,
+          "height": 148,
+          "bbox": [
+            17.58,
+            15.49,
+            258.58,
+            127.3
+          ],
+          "area_share": 0.0266,
+          "transform": [
+            241.0,
+            0.0,
+            -0.0,
+            111.81,
+            17.577,
+            15.4901
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 316,
+          "smask": 317,
+          "width": 1650,
+          "height": 518,
+          "bbox": [
+            43.07,
+            17.45,
+            312.07,
+            101.9
+          ],
+          "area_share": 0.0224,
+          "transform": [
+            269.0,
+            0.0,
+            -0.0,
+            84.45,
+            43.07,
+            17.45
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    },
+    {
+      "page_index": 3,
+      "width": 828.0,
+      "height": 1224.0,
+      "area": 1013472.0,
+      "rotation": 0,
+      "has_text_layer": true,
+      "word_count": 32,
+      "lines": [
+        {
+          "text": "matisse",
+          "bbox": [
+            630.8,
+            21.96,
+            774.98,
+            77.95
+          ]
+        },
+        {
+          "text": "Matisse | SR. NO :- 01",
+          "bbox": [
+            322.37,
+            1002.87,
+            505.93,
+            1028.07
+          ]
+        },
+        {
+          "text": "Width -137 CMS | Composition - 100% Poly. | Weight - 910 GLM | Martindale - 50,000 Rubs",
+          "bbox": [
+            62.43,
+            1039.92,
+            765.75,
+            1062.32
+          ]
+        },
+        {
+          "text": "07",
+          "bbox": [
+            39.05,
+            1168.8,
+            63.7,
+            1198.19
+          ]
+        },
+        {
+          "text": "go to shade - 1 thumbnail",
+          "bbox": [
+            609.26,
+            1171.92,
+            790.88,
+            1191.52
+          ]
+        }
+      ],
+      "images": [
+        {
+          "xref": 404,
+          "smask": 0,
+          "width": 1566,
+          "height": 2114,
+          "bbox": [
+            38.04,
+            111.95,
+            789.96,
+            1127.1
+          ],
+          "area_share": 0.7532,
+          "transform": [
+            -751.9215,
+            -0.0,
+            0.0,
+            -1015.1544,
+            789.9608,
+            1127.1035
+          ],
+          "rotation": 180,
+          "has_mask": false
+        },
+        {
+          "xref": 405,
+          "smask": 0,
+          "width": 319,
+          "height": 148,
+          "bbox": [
+            23.03,
+            -10.31,
+            264.03,
+            101.5
+          ],
+          "area_share": 0.0241,
+          "transform": [
+            241.0,
+            0.0,
+            -0.0,
+            111.81,
+            23.03,
+            -10.31
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 406,
+          "smask": 407,
+          "width": 1650,
+          "height": 518,
+          "bbox": [
+            43.07,
+            25.79,
+            266.07,
+            95.8
+          ],
+          "area_share": 0.0154,
+          "transform": [
+            223.0,
+            0.0,
+            -0.0,
+            70.008,
+            43.07,
+            25.792
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    },
+    {
+      "page_index": 4,
+      "width": 828.0,
+      "height": 1224.0,
+      "area": 1013472.0,
+      "rotation": 0,
+      "has_text_layer": true,
+      "word_count": 32,
+      "lines": [
+        {
+          "text": "matisse",
+          "bbox": [
+            630.8,
+            21.96,
+            774.98,
+            77.95
+          ]
+        },
+        {
+          "text": "Henry | SR. NO :- 101",
+          "bbox": [
+            322.37,
+            1002.87,
+            495.06,
+            1028.07
+          ]
+        },
+        {
+          "text": "Width -137 CMS | Composition - 100% Poly. | Weight - 510 GLM | Martindale - 40,000 Rubs",
+          "bbox": [
+            62.43,
+            1039.92,
+            765.73,
+            1062.32
+          ]
+        },
+        {
+          "text": "08",
+          "bbox": [
+            39.05,
+            1168.8,
+            65.48,
+            1198.19
+          ]
+        },
+        {
+          "text": "go to shade - 1 thumbnail",
+          "bbox": [
+            609.26,
+            1171.92,
+            790.88,
+            1191.52
+          ]
+        }
+      ],
+      "images": [
+        {
+          "xref": 494,
+          "smask": 0,
+          "width": 1580,
+          "height": 2126,
+          "bbox": [
+            31.32,
+            106.66,
+            796.64,
+            1132.41
+          ],
+          "area_share": 0.7746,
+          "transform": [
+            -758.6362,
+            -4.9657,
+            6.6816,
+            -1020.7824,
+            789.9555,
+            1132.4062
+          ],
+          "rotation": 180,
+          "has_mask": false
+        },
+        {
+          "xref": 495,
+          "smask": 0,
+          "width": 319,
+          "height": 148,
+          "bbox": [
+            17.58,
+            -14.11,
+            258.58,
+            97.7
+          ],
+          "area_share": 0.0232,
+          "transform": [
+            241.0,
+            0.0,
+            -0.0,
+            111.81,
+            17.577,
+            -14.11
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 496,
+          "smask": 497,
+          "width": 1650,
+          "height": 518,
+          "bbox": [
+            43.85,
+            21.89,
+            266.85,
+            91.9
+          ],
+          "area_share": 0.0154,
+          "transform": [
+            223.0,
+            0.0,
+            -0.0,
+            70.008,
+            43.849,
+            21.892
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    },
+    {
+      "page_index": 5,
+      "width": 828.0,
+      "height": 1224.0,
+      "area": 1013472.0,
+      "rotation": 0,
+      "has_text_layer": true,
+      "word_count": 32,
+      "lines": [
+        {
+          "text": "matisse",
+          "bbox": [
+            630.8,
+            21.96,
+            774.98,
+            77.95
+          ]
+        },
+        {
+          "text": "Matisse | SR. NO :- 02",
+          "bbox": [
+            322.37,
+            1002.87,
+            510.52,
+            1028.07
+          ]
+        },
+        {
+          "text": "Width -137 CMS | Composition - 100% Poly. | Weight - 910 GLM | Martindale - 50,000 Rubs",
+          "bbox": [
+            62.43,
+            1039.92,
+            765.75,
+            1062.32
+          ]
+        },
+        {
+          "text": "09",
+          "bbox": [
+            39.05,
+            1168.8,
+            65.46,
+            1198.19
+          ]
+        },
+        {
+          "text": "go to shade - 1 thumbnail",
+          "bbox": [
+            609.26,
+            1171.92,
+            790.88,
+            1191.52
+          ]
+        }
+      ],
+      "images": [
+        {
+          "xref": 584,
+          "smask": 0,
+          "width": 1565,
+          "height": 2116,
+          "bbox": [
+            38.21,
+            111.61,
+            789.79,
+            1127.45
+          ],
+          "area_share": 0.7533,
+          "transform": [
+            -751.5796,
+            -0.0,
+            0.0,
+            -1015.8408,
+            789.7895,
+            1127.4468
+          ],
+          "rotation": 180,
+          "has_mask": false
+        },
+        {
+          "xref": 585,
+          "smask": 0,
+          "width": 319,
+          "height": 148,
+          "bbox": [
+            23.81,
+            -18.01,
+            264.81,
+            93.8
+          ],
+          "area_share": 0.0223,
+          "transform": [
+            241.0,
+            0.0,
+            -0.0,
+            111.81,
+            23.809,
+            -18.0099
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 586,
+          "smask": 587,
+          "width": 1650,
+          "height": 518,
+          "bbox": [
+            53.2,
+            26.89,
+            276.2,
+            96.9
+          ],
+          "area_share": 0.0154,
+          "transform": [
+            223.0,
+            0.0,
+            -0.0,
+            70.008,
+            53.197,
+            26.892
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    },
+    {
+      "page_index": 6,
+      "width": 828.0,
+      "height": 1224.0,
+      "area": 1013472.0,
+      "rotation": 0,
+      "has_text_layer": true,
+      "word_count": 32,
+      "lines": [
+        {
+          "text": "matisse",
+          "bbox": [
+            630.8,
+            21.96,
+            774.98,
+            77.95
+          ]
+        },
+        {
+          "text": "Matisse | SR. NO :- 03",
+          "bbox": [
+            322.37,
+            1002.87,
+            510.78,
+            1028.07
+          ]
+        },
+        {
+          "text": "Width -137 CMS | Composition - 100% Poly. | Weight - 910 GLM | Martindale - 50,000 Rubs",
+          "bbox": [
+            62.43,
+            1039.92,
+            765.75,
+            1062.32
+          ]
+        },
+        {
+          "text": "10",
+          "bbox": [
+            39.05,
+            1168.8,
+            58.95,
+            1198.19
+          ]
+        },
+        {
+          "text": "go to shade - 1 thumbnail",
+          "bbox": [
+            609.26,
+            1171.92,
+            790.88,
+            1191.52
+          ]
+        }
+      ],
+      "images": [
+        {
+          "xref": 674,
+          "smask": 0,
+          "width": 1555,
+          "height": 2164,
+          "bbox": [
+            38.15,
+            80.89,
+            789.85,
+            1158.28
+          ],
+          "area_share": 0.7991,
+          "transform": [
+            -751.6953,
+            -31.3074,
+            0.0,
+            -1046.0883,
+            789.8477,
+            1158.2833
+          ],
+          "rotation": 180,
+          "has_mask": false
+        },
+        {
+          "xref": 675,
+          "smask": 0,
+          "width": 319,
+          "height": 148,
+          "bbox": [
+            22.25,
+            -15.71,
+            263.25,
+            96.1
+          ],
+          "area_share": 0.0229,
+          "transform": [
+            241.0,
+            0.0,
+            -0.0,
+            111.81,
+            22.251,
+            -15.71
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 676,
+          "smask": 677,
+          "width": 1650,
+          "height": 518,
+          "bbox": [
+            47.74,
+            28.89,
+            270.74,
+            98.9
+          ],
+          "area_share": 0.0154,
+          "transform": [
+            223.0,
+            0.0,
+            -0.0,
+            70.008,
+            47.744,
+            28.892
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    },
+    {
+      "page_index": 7,
+      "width": 828.0,
+      "height": 1224.0,
+      "area": 1013472.0,
+      "rotation": 0,
+      "has_text_layer": true,
+      "word_count": 5,
+      "lines": [
+        {
+          "text": "matisse",
+          "bbox": [
+            196.79,
+            67.87,
+            652.12,
+            244.67
+          ]
+        },
+        {
+          "text": "Natural Fibers II",
+          "bbox": [
+            388.22,
+            210.75,
+            647.9,
+            257.87
+          ]
+        },
+        {
+          "text": "www.nuhome.in",
+          "bbox": [
+            41.46,
+            1132.51,
+            201.22,
+            1160.98
+          ]
+        }
+      ],
+      "images": [
+        {
+          "xref": 731,
+          "smask": 0,
+          "width": 657,
+          "height": 1107,
+          "bbox": [
+            256.3,
+            367.89,
+            571.85,
+            899.31
+          ],
+          "area_share": 0.1655,
+          "transform": [
+            315.549,
+            0.0,
+            -0.0,
+            531.4135,
+            256.3014,
+            367.8932
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 733,
+          "smask": 0,
+          "width": 319,
+          "height": 148,
+          "bbox": [
+            570.68,
+            1076.47,
+            811.68,
+            1188.28
+          ],
+          "area_share": 0.0266,
+          "transform": [
+            241.0,
+            0.0,
+            -0.0,
+            111.81,
+            570.68,
+            1076.4741
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 733,
+          "smask": 0,
+          "width": 319,
+          "height": 148,
+          "bbox": [
+            16.02,
+            1083.49,
+            257.02,
+            1195.3
+          ],
+          "area_share": 0.0266,
+          "transform": [
+            241.0,
+            0.0,
+            -0.0,
+            111.81,
+            16.019,
+            1083.4851
+          ],
+          "rotation": 0,
+          "has_mask": false
+        },
+        {
+          "xref": 734,
+          "smask": 735,
+          "width": 1650,
+          "height": 518,
+          "bbox": [
+            196.15,
+            908.84,
+            635.15,
+            1046.66
+          ],
+          "area_share": 0.0597,
+          "transform": [
+            439.0,
+            0.0,
+            -0.0,
+            137.82,
+            196.15,
+            908.84
+          ],
+          "rotation": 0,
+          "has_mask": true
+        },
+        {
+          "xref": 736,
+          "smask": 737,
+          "width": 571,
+          "height": 107,
+          "bbox": [
+            266.58,
+            1059.18,
+            551.58,
+            1112.59
+          ],
+          "area_share": 0.015,
+          "transform": [
+            285.0,
+            0.0,
+            -0.0,
+            53.406,
+            266.58,
+            1059.184
+          ],
+          "rotation": 0,
+          "has_mask": true
+        }
+      ]
+    }
+  ]
+}
