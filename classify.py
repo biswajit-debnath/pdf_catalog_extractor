@@ -59,16 +59,14 @@ def classify_page(page_info, config=CONFIG):
     elif labels == 1 and large == 1:
         share = signals["large_images"][0]["area_share"]
         verdict, code, sentence = "product", "single_sr_single_large_image", f"1 SR. NO label and 1 image covering {share:.0%} of the page"
-    elif labels == 0 and large == 0 and not specs:
-        verdict, code, sentence = "skip", "no_large_image_no_specs", "no large image, SR. NO label or spec keyword"
+    elif labels == 0 and not specs:
+        verdict, code, sentence = "skip", "no_markers", "no SR. NO label or spec keyword"
     elif labels == 1 and large == 0:
         verdict, code, sentence = "uncertain", "sr_label_no_large_image", "1 SR. NO label but no large image"
     elif labels == 1 and large >= 2:
         verdict, code, sentence = "uncertain", "sr_label_multiple_large_images", f"1 SR. NO label and {large} large images"
     elif labels == 0 and specs:
         verdict, code, sentence = "uncertain", "specs_no_sr_label", f"spec keyword(s) {', '.join(signals['spec_keywords'])} but no SR. NO label"
-    else:
-        verdict, code, sentence = "uncertain", "large_image_no_sr_label", f"{large} large image(s) but no SR. NO label"
     return {"page_index": page_info["page_index"], "verdict": verdict,
             "reason": f"{code}: {sentence}", "signals": signals}
 
@@ -80,6 +78,9 @@ def classify_pdf(page_infos, config=CONFIG):
     counts = {verdict: sum(page["verdict"] == verdict for page in pages)
               for verdict in ("product", "skip", "uncertain")}
     share = counts["product"] / total if total else 0.0
+    skipped_large = [page["page_index"] for page in pages
+                     if page["verdict"] == "skip"
+                     and page["signals"]["largest_image_share"] > config["large_image_share"]]
     if total == 0:
         warning = "no pages to classify"
     elif counts["product"] == 0:
@@ -88,8 +89,13 @@ def classify_pdf(page_infos, config=CONFIG):
         warning = f"product share {share:.1%} is below {config['min_product_share']:.1%}"
     else:
         warning = None
-    summary = {"total": total, **counts, "product_share": share, "warning": warning}
-    review = [{"page_index": page["page_index"], "reason": page["reason"]}
+    if warning and (counts["product"] == 0 or share < config["min_product_share"]):
+        warning += f"; skipped_with_large_image: {len(skipped_large)}"
+    summary = {"total": total, **counts, "product_share": share,
+               "skipped_with_large_image": {"count": len(skipped_large), "pages": skipped_large},
+               "warning": warning}
+    review = [{"page_index": page["page_index"], "reason": page["reason"],
+               "signals": page["signals"]}
               for page in pages if page["verdict"] == "uncertain"]
     return {"pages": pages, "summary": summary, "review": review}
 

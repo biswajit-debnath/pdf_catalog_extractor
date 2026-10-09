@@ -6,7 +6,7 @@ This project is building a pipeline that turns fabric catalog PDFs into product 
 
 - `read_pdf.py` reads each PDF page into JSON: page size, reconstructed text lines, placed images (including each image's xref and page-area share), and text-layer information. A failed page is reported as an error record without stopping the rest of the PDF.
 - `classify.py` uses those page records to assign every page `product`, `skip`, or `uncertain`. It prints a page table by default, or a JSON result containing `pages`, `summary`, and the `review` list. Rules and thresholds are in the `CONFIG` dict at the top of the file.
-- Pages marked `uncertain` go into the review list. A low or zero product-page share sets `summary.warning`. Classification does not extract images or write output files.
+- Pages marked `uncertain` go into the review list with their signals. Unmarked pages without spec keywords are skipped even when they have a large image; `summary.skipped_with_large_image` lists them for inspection. A low or zero product-page share sets `summary.warning` and includes that skipped-image count. Classification does not extract images or write output files.
 
 The full rule table, decisions, and known edge cases are in [`docs/part2-plan.md`](docs/part2-plan.md). The Part 1 reader design is in [`docs/part1-plan.md`](docs/part1-plan.md).
 

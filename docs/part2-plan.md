@@ -332,3 +332,40 @@ and xref, because Part 2 deliberately doesn't copy them.
 - Pytest with the samples present: 64 passed. With `sample_pdfs/` temporarily renamed and restored: 26 passed, 38 skipped. The existing Part 1 tests were left unchanged.
 - Added `sample_pdfs/` and `*_output.json` to `.gitignore`. No client PDFs or generated real-sample JSON were added.
 - Tests needed to run outside the restricted filesystem sandbox because pytest-created temporary directories were inaccessible inside it. No implementation rule or threshold changed for this.
+
+---
+
+## Change 1 — Skip unmarked covers and surface large skipped images (implemented)
+
+This section supersedes the earlier rule 3, rule 7, cover predictions, summary and review examples, and related edge-case descriptions above. The earlier sections remain as the record of the original Part 2 implementation.
+
+### Research and decisions
+
+- Checked the current `classify.py`, `tests/test_classify.py`, and the Part 1 PageInfo contract. `get_signals` already provides the label count, keyword list, `largest_image_share`, and large-image placements needed here. `classify_pdf` already builds the summary and review list. Part 1 and the fixture generator need no change.
+- Local environment remains Python 3.14.4, PyMuPDF 1.28.2, and pytest 9.1.1. No new API or dependency is needed.
+- Q1: accept Matisse p1 as skip. Q2: Matisse p2 skips without a second grid pattern. Q3: keyword matching remains case-insensitive, word-boundary, and any one keyword counts. Q4: keep rule 1b. Q5: keep `min_product_share` at 0.10. Q6: keep both the generator and synthetic PDF committed. Q8: no Part 1 changes. The earlier Q7 repository hygiene change is already implemented.
+- The existing first-match order is retained. New rule 3 is `sr_label_count == 0 and not spec_keywords`, regardless of image count, with `skip` and reason code `no_markers`. It precedes rule 6. Remove rule 7 because every zero-label page has either no keywords (rule 3) or keywords (rule 6).
+
+### Work segments
+
+After each implementation segment, run both real PDFs, show their output, state PASS or FAIL against its expected result, and run the pytest suite. Stop on a failure.
+
+1. **Rule change (small).** Replace rule 3's condition and reason code in `classify_page`; remove the rule 7 fallback. Keep rules 0, 1, 1b, 2, 4, 5, and 6 unchanged and in order. **Expected:** Ikat pages 0 and 7 and Matisse page 0 become `skip/no_markers`; Matisse pages 1, 2, and 7 also use `no_markers`. Product pages, Ikat p6, and `specs_no_sr_label` remain as before. **Verify:** run the classifier table on both samples and the rule-row tests.
+2. **Batch diagnostics (small).** Add `summary.skipped_with_large_image` as `{"count": n, "pages": [...]}`. Include only skipped pages whose `signals.largest_image_share` is strictly greater than `config["large_image_share"]`; preserve page order and use zero-based `page_index`. Append the count to warning text when product count is zero or product share is below `min_product_share` (including an empty input's zero-product warning). Add the full `signals` dict to each review entry. **Expected:** Ikat diagnostic is `{"count": 2, "pages": [0, 7]}`; Matisse is `{"count": 1, "pages": [0]}`; both warnings remain null and both review lists are empty. **Verify:** run both PDFs and check JSON summary/review output, including an all-skip input with a large image.
+3. **Tests and CLI verification (small).** Update every affected unit, synthetic, and real-sample assertion; add checks for large-image boundary, warning count, full review signals, and a synthetic page with spec keywords but no SR. NO. Do not change the fixture PDF or generator unless an existing fixture fails to cover the requested case. The CLI table code needs no change because it prints the reason code from each result. **Expected:** Ikat products 1–5, skips 0/6/7, zero uncertain; Matisse products 3–6, skips 0/1/2/7, zero uncertain. The synthetic specs-only page stays `uncertain/specs_no_sr_label`. **Verify:** pytest with samples present and absent, then print both real verdict tables.
+
+### Edge cases
+
+- **Handled by Change 1:** full-page covers without SR. NO or spec keywords now skip, regardless of image size. The diagnostic makes those skipped large-image pages visible in the summary. A page with any configured spec keyword and no SR. NO remains uncertain even if it has no large image. An error record remains uncertain. A skip at exactly the threshold is excluded from `skipped_with_large_image` because the comparison is strict `>`.
+- **Still not handled:** OCR, different catalog marker without a config edit, two products on one page, small product swatches, duplicate large-image placements, inline-image extraction, labels baked into pixels, and empty names. As a deliberate tradeoff of Change 1, an unmarked product page with no visible spec keyword also skips; a low-product warning includes the count of skipped pages with large images for diagnosis.
+
+### Open questions
+
+None for this change. The requested outputs and earlier Q1–Q6/Q8 decisions are fixed above.
+
+### Implementation notes (2026-10-09)
+
+- Replaced rule 3 with `no_markers` regardless of image size and removed rule 7. Rules 0, 1, 1b, 2, 4, 5, and 6 kept their verdicts and reason codes.
+- Added `summary.skipped_with_large_image`, appended its count to zero/low-product warnings, and included full signals in review entries. The comparison uses strict `>` against the configured threshold.
+- Real results: Ikat 5 product / 3 skip / 0 uncertain, skipped-large pages `[0, 7]`; Matisse 4 / 4 / 0, skipped-large page `[0]`. Review lists are empty. The synthetic specs-only page remains uncertain.
+- Verification: 65 pytest tests passed with real samples present; 27 passed and 38 skipped with `sample_pdfs/` temporarily absent. Both CLI verdict tables matched the expected page indices and reason codes. The fixture and Part 1 files were unchanged.
